@@ -1,0 +1,118 @@
+:host {
+  --color-dark: #1a1a2e;
+  --color-primary: #ff416c;
+  --color-secondary: #ff4b2b;
+  --color-text: #e0e0e0;
+  --color-item-bg: rgba(255, 255, 255, 0.1);
+  --color-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.contador-cumple {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--color-dark);
+  color: var(--color-text);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.contador-cumple h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px var(--color-shadow);
+}
+
+.contador-items {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.item {
+  background: var(--color-item-bg);
+  backdrop-filter: blur(10px);
+  padding: 25px 35px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 var(--color-shadow);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto para que se vea interactivo */
+.item:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.item h3 {
+  font-size: 4rem;
+  font-weight: 600;
+  margin: 0;
+  background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 5px rgba(255, 65, 108, 0.4);
+}
+
+.item p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  color: var(--color-text);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/* Estilos para pantallas más pequeñas (tabletas y móviles) */
+@media (max-width: 768px) {
+  .contador-cumple h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .contador-items {
+    flex-wrap: wrap; /* Permite que los ítems pasen a la siguiente línea */
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .item {
+    padding: 15px 20px;
+    min-width: 120px; /* Asegura un ancho mínimo para los ítems */
+  }
+
+  .item h3 {
+    font-size: 2.5rem;
+  }
+
+  .item p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Estilos para pantallas aún más pequeñas (móviles) */
+@media (max-width: 480px) {
+  .contador-cumple h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .contador-items {
+    gap: 10px;
+  }
+
+  .item {
+    padding: 10px 15px;
+    min-width: 90px;
+  }
+
+  .item h3 {
+    font-size: 2rem;
+  }
+
+  .item p {
+    font-size: 0.7rem;
+  }
+}
