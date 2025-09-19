@@ -1,10 +1,11 @@
 import { Component, OnInit, signal, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Subject, timer, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-happy-bd',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './happy-bd.html',
   styleUrls: ['./happy-bd.css']
 })
@@ -15,9 +16,10 @@ export class HappyBd implements OnInit, OnDestroy {
     minutes: 0,
     seconds: 0
   });
-
   private birthday = Date.UTC(2025, 8, 21, 0, 0, 0);
   private destroy$ = new Subject<void>();
+  public birthdayMessage = '';
+  public isBirthday = false;
 
   ngOnInit(): void {
     timer(0, 1000)
@@ -38,8 +40,11 @@ export class HappyBd implements OnInit, OnDestroy {
             minutes: Math.floor((distance % oneHour) / oneMinute),
             seconds: Math.floor((distance % oneMinute) / oneSecond),
           });
-        } else {
+        }
+        else {
           this.timeRemaining.set({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+          this.birthdayMessage = '¡Feliz cumpleaños Orelys 🎂🎂🎂!';
+          this.isBirthday = true;
         }
       });
   }
