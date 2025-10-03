@@ -1,0 +1,20 @@
+.invitacion {
+  font-family: 'Georgia', serif;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.invitacion h1 {
+  color: #333;
+  font-size: 2em;
+}
+
+.invitacion p {
+  color: #555;
+  font-size: 1.2em;
+}
+
