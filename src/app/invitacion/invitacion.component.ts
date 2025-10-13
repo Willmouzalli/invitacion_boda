@@ -16,5 +16,12 @@ export class InvitacionComponent {
       this.numeroInvitados = +params['numero'];
     });
   }
+
+  enableSound(): void {
+    const audio: HTMLAudioElement | null = document.querySelector('#background-audio');
+    if (audio) {
+      audio.play();
+    }
+  }
 }
 
