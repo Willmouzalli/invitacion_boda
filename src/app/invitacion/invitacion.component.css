@@ -12,7 +12,7 @@
 }
 .dorado_brillante {
   font-size: 4em;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', cursive !important; font-style: italic;
   background: linear-gradient(90deg, #FFD700, #FFC700, #B8860B, #FFD700);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -29,7 +29,7 @@
 
 .dorado_normal {
   font-size: 2em;
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', cursive !important; font-style: italic;
   background: linear-gradient(90deg, #FFD700, #FFC700, #FF8C00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
