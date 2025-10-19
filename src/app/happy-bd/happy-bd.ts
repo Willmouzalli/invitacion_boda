@@ -43,7 +43,6 @@ export class HappyBd implements OnInit, OnDestroy {
         }
         else {
           this.timeRemaining.set({ days: 0, hours: 0, minutes: 0, seconds: 0 });
-          this.birthdayMessage = '¡Feliz cumpleaños Orelys 🎂🎂🎂!';
           this.isBirthday = true;
         }
       });
